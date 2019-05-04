@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  body: 
+  author_id: MyString
+  integer,: MyString
+  id: 1
+
+two:
+  title: 
+  body: 
+  author_id: MyString
+  integer,: MyString
+  id: 1
