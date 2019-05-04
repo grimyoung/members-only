@@ -19,6 +19,12 @@ class User < ApplicationRecord
   def User.new_token
     SecureRandom.urlsafe_base64
   end
+
+  def User.authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
+  end
   
   def remember
     self.remember_token = User.new_token
